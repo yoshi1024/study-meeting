@@ -56,3 +56,5 @@ plt.show()
 
 plt.hist(df['人口（男）'])
 plt.show()
+
+# クロス集計表
