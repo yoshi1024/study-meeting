@@ -43,7 +43,7 @@ for year in range(2010,2022):
                 df_result_past['レースID'] = race_id
                 df_shutuba= pd.concat([df_shutuba, df_result_past])
 # %%
-df_result_past
+df_result.head()
 # %%
 #ライブラリのインポート
 import pandas as pd
