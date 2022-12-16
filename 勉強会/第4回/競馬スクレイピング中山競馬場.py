@@ -54,6 +54,10 @@ results = scrape_race_results(race_id_list)
 for key in results:
     results[key].index = [key] * len(results[key])
 results = pd.concat([results[key] for key in results], sort=False)
+#%%
+results
+
+results.to_csv('/Users/yoshida_ibuki/Documents/勉強会フォルダ/勉強会/勉強会/第4回/データ簡易版.csv',index=False)
 # %%
 import requests
 from bs4 import BeautifulSoup
@@ -104,3 +108,9 @@ for key in race_infos:
     race_infos[key].index = [key] * len(race_infos[key])
 race_infos = pd.concat([pd.DataFrame(race_infos[key], index=[key]) for key in race_infos])
 results = results.merge(race_infos, left_index=True, right_index=True, how='left')
+# %%
+results
+# %%
+results.to_csv('/Users/yoshida_ibuki/Documents/勉強会フォルダ/勉強会/勉強会/第4回/データ完全版.csv',index=False)
+
+# %%
