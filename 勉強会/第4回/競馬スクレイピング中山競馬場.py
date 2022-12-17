@@ -18,6 +18,7 @@ def scrape_race_results(race_id_list, pre_race_results={}):
             break
     return race_results
 # %%
+
 race_id_list = []
 for place in range(1, 11, 1):
     for kai in range(1, 6, 1):

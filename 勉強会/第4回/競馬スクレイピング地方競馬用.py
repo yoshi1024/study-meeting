@@ -16,16 +16,14 @@ for year in range(2010,2022):
         list_cal = [str(a) for a in sum(df_cal.values.tolist(), [])]
         list_day = [i.split()[0].zfill(2) for i in list_cal if '中山' in i]
 
-
         for day in list_day:
             for race_no in range(1,13):
                 race_id = '{}48{}{}{}'.format(str(year), str(month).zfill(2), day, str(race_no).zfill(2))
-                url_race = 'https://nar.netkeiba.com/race/result.html?race_id={}&rf=race_list'.format(race_id)
+                #url_race = 'https://nar.netkeiba.com/race/result.html?race_id={}&rf=race_list'.format(race_id)
                 url_race = 'https://race.netkeiba.com/race/result.html?race_id={}&rf=race_list'.format(race_id)
 
-                url_past = 'https://nar.netkeiba.com/race/shutuba_past.html?race_id={}&rf=shutuba_submenu'.format(race_id)
+                #url_past = 'https://nar.netkeiba.com/race/shutuba_past.html?race_id={}&rf=shutuba_submenu'.format(race_id)
                 url_past = 'https://race.netkeiba.com/race/shutuba_past.html?race_id={}&rf=shutuba_submenu'.format(race_id)
-                            https://race.netkeiba.com/race/shutuba_past.html?race_id=201006050810&rf=shutuba_submenu
                 print(url_race)
                 try:
                     df_result = pd.read_html(url_race)[0]
